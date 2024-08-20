@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Application\\Vendor.Application.csproj": {}
+    "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Application\\Vendor.Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Application\\Vendor.Application.csproj": {
+    "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Application\\Vendor.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Application\\Vendor.Application.csproj",
+        "projectUniqueName": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Application\\Vendor.Application.csproj",
         "projectName": "Vendor.Application",
-        "projectPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Application\\Vendor.Application.csproj",
-        "packagesPath": "C:\\Users\\revathy.rajeevan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Application\\obj\\",
+        "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Application\\Vendor.Application.csproj",
+        "packagesPath": "C:\\Users\\jisna.george\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\revathy.rajeevan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jisna.george\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -33,11 +29,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj": {
-                "projectPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj"
+              "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj": {
+                "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj"
               },
-              "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj"
+              "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj"
               }
             }
           }
@@ -72,25 +68,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj": {
+    "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj",
         "projectName": "Vendor.Domain",
-        "projectPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj",
-        "packagesPath": "C:\\Users\\revathy.rajeevan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\obj\\",
+        "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj",
+        "packagesPath": "C:\\Users\\jisna.george\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\revathy.rajeevan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jisna.george\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -137,25 +129,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj": {
+    "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
         "projectName": "Vendor.Infrastructure",
-        "projectPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\revathy.rajeevan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\jisna.george\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\revathy.rajeevan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jisna.george\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -169,7 +157,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj": {
+                "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -186,6 +178,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.8, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -202,7 +216,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

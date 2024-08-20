@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj": {}
+    "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj": {
+    "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj",
         "projectName": "Vendor.Domain",
-        "projectPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\Vendor.Domain.csproj",
-        "packagesPath": "C:\\Users\\revathy.rajeevan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\revathy.rajeevan\\Desktop\\OJT\\VendorManagement\\Vendor.Domain\\obj\\",
+        "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj",
+        "packagesPath": "C:\\Users\\jisna.george\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\revathy.rajeevan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\jisna.george\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -65,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

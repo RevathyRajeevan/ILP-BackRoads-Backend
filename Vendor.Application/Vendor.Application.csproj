@@ -13,6 +13,11 @@
 
   <ItemGroup>
     <Folder Include="DTOs\VendorDTO\" />
+    <Folder Include="Contracts\" />
+    <Folder Include="AutoMapper\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Requests\Markets\" />
+    <Folder Include="Requests\Vendor\" />
     <Folder Include="Requests\Vendor\" />
   </ItemGroup>
 
