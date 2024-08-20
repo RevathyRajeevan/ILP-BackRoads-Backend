@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.infrastructure\\vendor.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|solutionrelative:vendor.infrastructure\\vendor.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|solutionrelative:vendor.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC5C777A-1B01-43D6-A5F9-70FDD6B157EB}|Vendor.Application\\Vendor.Application.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.application\\vendor.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BC5C777A-1B01-43D6-A5F9-70FDD6B157EB}|Vendor.Application\\Vendor.Application.csproj|solutionrelative:vendor.application\\vendor.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{50D1A08A-55B7-47CC-B4EA-4BD30228FF61}|Vendor.Domain\\Vendor.Domain.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.domain\\vendor.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{50D1A08A-55B7-47CC-B4EA-4BD30228FF61}|Vendor.Domain\\Vendor.Domain.csproj|solutionrelative:vendor.domain\\vendor.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|solutionrelative:vendor.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.infrastructure\\implementation\\persistence\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|solutionrelative:vendor.infrastructure\\implementation\\persistence\\apicontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.infrastructure\\implementation\\persistence\\entityconfigurations\\vendorentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|solutionrelative:vendor.infrastructure\\implementation\\persistence\\entityconfigurations\\vendorentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.infrastructure\\implementation\\persistence\\entityconfigurations\\vendormarketentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|solutionrelative:vendor.infrastructure\\implementation\\persistence\\entityconfigurations\\vendormarketentityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.infrastructure\\vendor.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{DD565F1F-3C1F-40CD-8BAA-70B1110271C2}|Vendor.Infrastructure\\Vendor.Infrastructure.csproj|solutionrelative:vendor.infrastructure\\vendor.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|solutionrelative:vendor.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC5C777A-1B01-43D6-A5F9-70FDD6B157EB}|Vendor.Application\\Vendor.Application.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.application\\vendor.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BC5C777A-1B01-43D6-A5F9-70FDD6B157EB}|Vendor.Application\\Vendor.Application.csproj|solutionrelative:vendor.application\\vendor.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F9D050B2-978E-457D-A159-03F9881BF55E}|Vendor.API\\Vendor.API.csproj|solutionrelative:vendor.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{50D1A08A-55B7-47CC-B4EA-4BD30228FF61}|Vendor.Domain\\Vendor.Domain.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.domain\\vendor.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{50D1A08A-55B7-47CC-B4EA-4BD30228FF61}|Vendor.Domain\\Vendor.Domain.csproj|solutionrelative:vendor.domain\\vendor.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50D1A08A-55B7-47CC-B4EA-4BD30228FF61}|Vendor.Domain\\Vendor.Domain.csproj|c:\\users\\jisna.george\\desktop\\backroads\\ilp-backroads-backend\\vendor.domain\\entities\\vendors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,6 +71,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VendorMarketEntityConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorMarketEntityConfiguration.cs",
+              "RelativeDocumentMoniker": "Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorMarketEntityConfiguration.cs",
+              "ToolTip": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorMarketEntityConfiguration.cs",
+              "RelativeToolTip": "Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorMarketEntityConfiguration.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAiwBsAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-20T08:34:00.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -83,20 +100,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "ApiContext.cs",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Implementation\\Persistence\\ApiContext.cs",
               "RelativeDocumentMoniker": "Vendor.Infrastructure\\Implementation\\Persistence\\ApiContext.cs",
               "ToolTip": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Implementation\\Persistence\\ApiContext.cs",
               "RelativeToolTip": "Vendor.Infrastructure\\Implementation\\Persistence\\ApiContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAvAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAA7wBUAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-19T09:09:39.565Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.API\\appsettings.Development.json",
               "RelativeDocumentMoniker": "Vendor.API\\appsettings.Development.json",
@@ -109,33 +126,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Vendor.Infrastructure",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
               "RelativeDocumentMoniker": "Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
               "ToolTip": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
               "RelativeToolTip": "Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAArAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2024-08-19T09:08:39.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "VendorEntityConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorEntityConfiguration.cs",
               "RelativeDocumentMoniker": "Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorEntityConfiguration.cs",
               "ToolTip": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorEntityConfiguration.cs",
               "RelativeToolTip": "Vendor.Infrastructure\\Implementation\\Persistence\\EntityConfigurations\\VendorEntityConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAqwAwAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-19T10:27:38.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "Vendor.Domain",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj",
               "RelativeDocumentMoniker": "Vendor.Domain\\Vendor.Domain.csproj",
@@ -148,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Vendor.Application",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Application\\Vendor.Application.csproj",
               "RelativeDocumentMoniker": "Vendor.Application\\Vendor.Application.csproj",
@@ -161,7 +178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Vendors.cs",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Entities\\Vendors.cs",
               "RelativeDocumentMoniker": "Vendor.Domain\\Entities\\Vendors.cs",
@@ -174,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "VendorMarkets.cs",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Entities\\VendorMarkets.cs",
               "RelativeDocumentMoniker": "Vendor.Domain\\Entities\\VendorMarkets.cs",
@@ -187,7 +204,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Services.cs",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Entities\\Services.cs",
               "RelativeDocumentMoniker": "Vendor.Domain\\Entities\\Services.cs",
@@ -200,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Markets.cs",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Entities\\Markets.cs",
               "RelativeDocumentMoniker": "Vendor.Domain\\Entities\\Markets.cs",
@@ -213,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "MappingConfig.cs",
               "DocumentMoniker": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Implementation\\Mapping\\MappingConfig.cs",
               "RelativeDocumentMoniker": "Vendor.Infrastructure\\Implementation\\Mapping\\MappingConfig.cs",

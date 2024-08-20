@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Vendor.Domain.Entities;
+using Vendor.Infrastructure.Implementation.Persistence.EntityConfigurations;
 
 public class ApiContext : DbContext
 {
@@ -12,23 +13,9 @@ public class ApiContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<VendorMarkets>()
-            .HasKey(vm => new { vm.VendorId, vm.MarketId });
+        modelBuilder.ApplyConfiguration(new VendorEntityConfiguration());
+        modelBuilder.ApplyConfiguration(new VendorMarketEntityConfiguration());
 
-        modelBuilder.Entity<VendorMarkets>()
-            .HasOne(vm => vm.Vendor)
-            .WithMany(v => v.VendorMarkets)
-            .HasForeignKey(vm => vm.VendorId);
-
-        modelBuilder.Entity<VendorMarkets>()
-            .HasOne(vm => vm.Market)
-            .WithMany(m => m.VendorMarkets)
-            .HasForeignKey(vm => vm.MarketId);
-
-        modelBuilder.Entity<Vendors>()
-            .HasOne(v => v.Service)
-            .WithMany(s => s.Vendors)
-            .HasForeignKey(v => v.ServiceId);
 
         base.OnModelCreating(modelBuilder);
     }
