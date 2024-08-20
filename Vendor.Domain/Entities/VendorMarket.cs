@@ -7,7 +7,7 @@ using Vendor.Domain.Entities;
 
 namespace Vendor.Domain.Entities
 {
-    public class VendorMarkets
+    public class VendorMarket
     {
         public int VendorId { get; set; }
         public Vendors Vendor { get; set; }

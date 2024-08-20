@@ -5,16 +5,19 @@ using Vendor.Infrastructure.Implementation.Persistence;
 var builder = WebApplication.CreateBuilder(args);
 
 
+var allowedOrigins = builder.Configuration.GetSection("CorsSettings:AllowedOrigins").Get<string[]>();
 
+// Configure CORS
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", builder =>
+    options.AddPolicy("AllowOnlyRequiredOrigins", policyBuilder =>
     {
-        builder.AllowAnyOrigin()
-               .AllowAnyMethod()
-               .AllowAnyHeader();
+        policyBuilder.WithOrigins(allowedOrigins)
+                     .AllowAnyMethod()
+                     .AllowAnyHeader();
     });
 });
+
 // Add services to the container.
 builder.Services.AddDbContext<ApiContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")
@@ -28,7 +31,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
-app.UseCors("AllowAll");
+app.UseCors("AllowOnlyRequiredOrigins");
 
 if (app.Environment.IsDevelopment())
 {

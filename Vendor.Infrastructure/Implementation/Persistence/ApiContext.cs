@@ -6,10 +6,10 @@ public class ApiContext : DbContext
 {
     public ApiContext(DbContextOptions<ApiContext> options) : base(options) { }
 
-    public DbSet<Vendors> Vendors { get; set; }
-    public DbSet<Markets> Markets { get; set; }
-    public DbSet<VendorMarkets> VendorMarkets { get; set; }
-    public DbSet<Services> Services { get; set; }
+    public DbSet<Vendor> Vendors { get; set; }
+    public DbSet<Market> Markets { get; set; }
+    public DbSet<VendorMarket> VendorMarkets { get; set; }
+    public DbSet<Service> Services { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

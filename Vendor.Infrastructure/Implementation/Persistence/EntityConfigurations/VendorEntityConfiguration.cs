@@ -10,12 +10,12 @@ using Vendor.Domain.Entities;
 
 namespace Vendor.Infrastructure.Implementation.Persistence.EntityConfigurations
 {
-    public class VendorEntityConfiguration: IEntityTypeConfiguration<Vendors>
+    public class VendorEntityConfiguration: IEntityTypeConfiguration<Vendor>
     {
-        public void Configure(EntityTypeBuilder<Vendors> modelBuilder)
+        public void Configure(EntityTypeBuilder<Vendor> modelBuilder)
         {
             modelBuilder.HasOne(v => v.Service)
-            .WithMany(s => s.Vendors)
+            .WithMany(s => s.Vendor)
             .HasForeignKey(v => v.ServiceId);
         }
         

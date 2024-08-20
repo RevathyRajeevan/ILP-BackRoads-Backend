@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Vendor.Domain.Entities
 {
-    public class Markets
+    public class Market
     {
        
 
