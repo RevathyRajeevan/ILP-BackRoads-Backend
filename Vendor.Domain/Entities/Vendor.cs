@@ -1,6 +1,6 @@
 ﻿using Vendor.Domain.Entities;
 
-public class Vendor
+public class Vendors
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -13,11 +13,11 @@ public class Vendor
     public string Website { get; set; }
 
     public int ServiceId { get; set; }
-    public Services Service { get; set; } 
+    public Service Service { get; set; } 
 
     public bool IsApproved { get; set; }
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-    public ICollection<VendorMarkets> VendorMarkets { get; set; } = new List<VendorMarkets>();
+    public ICollection<VendorMarket> VendorMarket { get; set; } = new List<VendorMarket>();
 }

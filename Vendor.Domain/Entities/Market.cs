@@ -17,6 +17,6 @@ namespace Vendor.Domain.Entities
         public string Name { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
-        public ICollection<VendorMarkets> VendorMarkets { get; set; } = new List<VendorMarkets>();
+        public ICollection<VendorMarket> VendorMarket { get; set; } = new List<VendorMarket>();
     }
 }
