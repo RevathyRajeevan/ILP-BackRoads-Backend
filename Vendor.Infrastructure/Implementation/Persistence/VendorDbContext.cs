@@ -6,7 +6,7 @@ public class VendorDbContext : DbContext
 {
     public VendorDbContext(DbContextOptions<VendorDbContext> options) : base(options) { }
 
-    public DbSet<Vendors> Vendors { get; set; }
+    public DbSet<Vendor.Domain.Entities.Vendor> Vendors { get; set; }
     public DbSet<Market> Markets { get; set; }
     public DbSet<VendorMarket> VendorMarkets { get; set; }
     public DbSet<Service> Services { get; set; }

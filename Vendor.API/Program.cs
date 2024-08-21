@@ -1,6 +1,10 @@
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Vendor.Application.Requests.Vendor;
 using Vendor.Domain.Entities;
 using Vendor.Infrastructure.Implementation.Persistence;
+using static Vendor.Application.Requests.Vendor.GetAllVendorsQuery;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,11 +25,9 @@ builder.Services.AddCors(options =>
 // Add services to the container.
 builder.Services.AddDbContext<VendorDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")
-    ));
+));
 
-
-
-
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllVendorsQuery).Assembly));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

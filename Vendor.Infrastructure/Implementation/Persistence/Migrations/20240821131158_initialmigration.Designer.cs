@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
 {
     [DbContext(typeof(VendorDbContext))]
-    [Migration("20240821042615_AddVendorSchema")]
-    partial class AddVendorSchema
+    [Migration("20240821131158_initialmigration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -37,7 +37,6 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -60,7 +59,6 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
@@ -71,22 +69,7 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                     b.ToTable("Services", "vendor");
                 });
 
-            modelBuilder.Entity("Vendor.Domain.Entities.VendorMarket", b =>
-                {
-                    b.Property<int>("VendorId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("MarketId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("VendorId", "MarketId");
-
-                    b.HasIndex("MarketId");
-
-                    b.ToTable("VendorMarkets", "vendor");
-                });
-
-            modelBuilder.Entity("Vendors", b =>
+            modelBuilder.Entity("Vendor.Domain.Entities.Vendor", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -95,47 +78,39 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("City")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Country")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<bool>("IsApproved")
                         .HasColumnType("boolean");
 
                     b.Property<string>("Name")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("Phone")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<string>("PostalCode")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<int>("ServiceId")
                         .HasColumnType("integer");
 
                     b.Property<string>("StateProvinceRegion")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Website")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -147,24 +122,23 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
 
             modelBuilder.Entity("Vendor.Domain.Entities.VendorMarket", b =>
                 {
-                    b.HasOne("Vendor.Domain.Entities.Market", "Market")
-                        .WithMany("VendorMarket")
-                        .HasForeignKey("MarketId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("VendorId")
+                        .HasColumnType("integer");
 
-                    b.HasOne("Vendors", "Vendor")
-                        .WithMany("VendorMarket")
-                        .HasForeignKey("VendorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Property<int>("MarketId")
+                        .HasColumnType("integer");
 
-                    b.Navigation("Market");
+                    b.Property<int>("Id")
+                        .HasColumnType("integer");
 
-                    b.Navigation("Vendor");
+                    b.HasKey("VendorId", "MarketId");
+
+                    b.HasIndex("MarketId");
+
+                    b.ToTable("VendorMarkets", "vendor");
                 });
 
-            modelBuilder.Entity("Vendors", b =>
+            modelBuilder.Entity("Vendor.Domain.Entities.Vendor", b =>
                 {
                     b.HasOne("Vendor.Domain.Entities.Service", "Service")
                         .WithMany("Vendors")
@@ -173,6 +147,25 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Service");
+                });
+
+            modelBuilder.Entity("Vendor.Domain.Entities.VendorMarket", b =>
+                {
+                    b.HasOne("Vendor.Domain.Entities.Market", "Market")
+                        .WithMany("VendorMarket")
+                        .HasForeignKey("MarketId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Vendor.Domain.Entities.Vendor", "Vendor")
+                        .WithMany("VendorMarket")
+                        .HasForeignKey("VendorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Market");
+
+                    b.Navigation("Vendor");
                 });
 
             modelBuilder.Entity("Vendor.Domain.Entities.Market", b =>
@@ -185,7 +178,7 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                     b.Navigation("Vendors");
                 });
 
-            modelBuilder.Entity("Vendors", b =>
+            modelBuilder.Entity("Vendor.Domain.Entities.Vendor", b =>
                 {
                     b.Navigation("VendorMarket");
                 });

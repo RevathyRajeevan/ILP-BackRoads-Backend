@@ -2318,19 +2318,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jisna.george\\.nuget\\packages\\": {}
+    "C:\\Users\\sreejith.shaji\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\sreejith.shaji\\Desktop\\New folder (2)\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
       "projectName": "Vendor.Infrastructure",
-      "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\jisna.george\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\sreejith.shaji\\Desktop\\New folder (2)\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\sreejith.shaji\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sreejith.shaji\\Desktop\\New folder (2)\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jisna.george\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sreejith.shaji\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2345,8 +2345,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj": {
-              "projectPath": "C:\\Users\\jisna.george\\Desktop\\Backroads\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj"
+            "C:\\Users\\sreejith.shaji\\Desktop\\New folder (2)\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj": {
+              "projectPath": "C:\\Users\\sreejith.shaji\\Desktop\\New folder (2)\\ILP-BackRoads-Backend\\Vendor.Domain\\Vendor.Domain.csproj"
             }
           }
         }
@@ -2403,7 +2403,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
