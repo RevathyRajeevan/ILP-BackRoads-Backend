@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
 using Moq;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using Vendor.Application.DTOs.VendorDTO;
 using Vendor.Application.Requests.Vendor;
 using Vendor.Domain.Entities;
 using Vendor.Infrastructure.Implementation.Persistence;
-using Xunit;
 
 public class GetVendorsHandlerTests
 {
