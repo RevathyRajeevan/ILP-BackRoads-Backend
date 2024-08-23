@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
 {
-    [DbContext(typeof(VendorDbContext))]
+    [DbContext(typeof(global::VendorDbContext))]
     [Migration("20240821131158_initialmigration")]
     partial class initialmigration
     {

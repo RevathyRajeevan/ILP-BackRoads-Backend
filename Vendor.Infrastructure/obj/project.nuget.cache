@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "SF1sULVt+lY=",
+  "dgSpecHash": "FMxFchkYFu0=",
   "success": true,
   "projectFilePath": "C:\\Users\\sreejith.shaji\\Desktop\\New folder (2)\\ILP-BackRoads-Backend\\Vendor.Infrastructure\\Vendor.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sreejith.shaji\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\sreejith.shaji\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\sreejith.shaji\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\sreejith.shaji\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

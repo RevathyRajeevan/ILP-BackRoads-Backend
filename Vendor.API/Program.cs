@@ -1,10 +1,8 @@
-using Microsoft.AspNetCore.Hosting;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+using Vendor.Application.AutoMapper;
 using Vendor.Application.Requests.Vendor;
-using Vendor.Domain.Entities;
 using Vendor.Infrastructure.Implementation.Persistence;
-using static Vendor.Application.Requests.Vendor.GetAllVendorsQuery;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,8 +24,12 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<VendorDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")
 ));
+builder.Services.AddScoped<IVendorDbContext, VendorDbContext>();
 
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetAllVendorsQuery).Assembly));
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(GetVendorsQuery).Assembly));
+builder.Services.AddAutoMapper(typeof(MappingConfig));
+builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<AddVendorCommandValidator>());
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

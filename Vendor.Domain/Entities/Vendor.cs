@@ -1,13 +1,14 @@
-﻿using Vendor.Domain.Entities;
+﻿using System.Text.Json.Serialization;
+using Vendor.Domain.Entities;
+using Vendor.Domain.Entities.Common;
 
 
 namespace Vendor.Domain.Entities
 {
 
-    public class Vendor
+    public class Vendor :BaseEntity
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
+
         public string City { get; set; }
         public string StateProvinceRegion { get; set; }
         public string PostalCode { get; set; }
@@ -17,12 +18,14 @@ namespace Vendor.Domain.Entities
         public string Website { get; set; }
 
         public int ServiceId { get; set; }
+
+        [JsonIgnore]
         public Service Service { get; set; }
 
         public bool IsApproved { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
 
         public ICollection<VendorMarket> VendorMarket { get; set; }
     }
+
 }

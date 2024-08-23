@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
 {
-    [DbContext(typeof(VendorDbContext))]
+    [DbContext(typeof(global::VendorDbContext))]
     partial class VendorDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

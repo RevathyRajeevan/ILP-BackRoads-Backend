@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "4lMNketLGDY=",
+  "dgSpecHash": "sTOckvtCC2w=",
   "success": true,
   "projectFilePath": "C:\\Users\\sreejith.shaji\\Desktop\\New folder (2)\\ILP-BackRoads-Backend\\Vendor.Application\\Vendor.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\sreejith.shaji\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\sreejith.shaji\\.nuget\\packages\\fluentvalidation\\11.9.2\\fluentvalidation.11.9.2.nupkg.sha512",
     "C:\\Users\\sreejith.shaji\\.nuget\\packages\\mediatr\\12.4.0\\mediatr.12.4.0.nupkg.sha512",
     "C:\\Users\\sreejith.shaji\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
     "C:\\Users\\sreejith.shaji\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
