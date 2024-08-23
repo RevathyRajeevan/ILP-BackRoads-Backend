@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,13 +12,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\VendorDTO\" />
     <Folder Include="Contracts\" />
-    <Folder Include="AutoMapper\" />
-    <Folder Include="DTOs\" />
-    <Folder Include="Requests\Markets\" />
-    <Folder Include="Requests\Vendor\" />
-    <Folder Include="Requests\Vendor\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.9.2" />
+    <PackageReference Include="MediatR" Version="12.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
   </ItemGroup>
 
 </Project>
