@@ -11,7 +11,7 @@ namespace Vendor.Application.AutoMapper
         public MappingConfig() {
 
             CreateMap<Domain.Entities.Vendor, VendorDto>();
-
+            CreateMap<Domain.Entities.Vendor, VendorByIdDto>();
             CreateMap<AddVendorCommand, Domain.Entities.Vendor>();
             CreateMap<Domain.Entities.Vendor, CreateDto>();
             CreateMap<Domain.Entities.Vendor, MarketDto>();

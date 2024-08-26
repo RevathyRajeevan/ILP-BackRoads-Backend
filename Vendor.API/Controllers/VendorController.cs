@@ -40,6 +40,31 @@ namespace Vendor.API.Controllers
             }
         }
         //<Summary>
+        // Method: GetVendorById
+        // Purpose: Retrieves vendor details by Id from the database
+        // Route: api/vendor/GetVendorById/{id}
+        // HTTP Method: GET
+        // Response Types:
+        // - 200 OK with VendorDto if successful
+        // - 400 Bad Request if an error occurs
+        //</Summary>
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VendorByIdDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+
+        public async Task<ActionResult<VendorByIdDto>> GetVendorById(int id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var response = await _mediator.Send(new GetVendorByIdQuery(id), cancellationToken);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+        //<Summary>
         // Method: CreateVendor
         // Purpose: Creates a new vendor
         // Route: api/vendor/createvendor

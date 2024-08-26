@@ -9,7 +9,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
 {
-    [DbContext(typeof(global::VendorDbContext))]
+    [DbContext(typeof(VendorDbContext))]
     partial class VendorDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
@@ -123,9 +123,6 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int>("MarketId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Id")
                         .HasColumnType("integer");
 
                     b.HasKey("VendorId", "MarketId");

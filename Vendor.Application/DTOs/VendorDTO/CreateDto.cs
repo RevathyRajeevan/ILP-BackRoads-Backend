@@ -5,9 +5,7 @@
     {
         public int Id { get; set; } // Unique identifier for the vendor.
         public string Name { get; set; } // Name of the vendor.
-        public string City { get; set; } // City where the vendor is located.
         public string StateProvinceRegion { get; set; } // State, province, or region of the vendor.
-        public string PostalCode { get; set; } // Postal code for the vendor's location.
         public string Country { get; set; } // Country where the vendor is based.
         public string Email { get; set; } // Email address of the vendor.
         public string Phone { get; set; } // Phone number of the vendor.
