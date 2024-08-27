@@ -6,18 +6,20 @@ using Vendor.Infrastructure.Implementation.Persistence;
 namespace Vendor.Application.Requests.Vendor
 {
     // Query class to request a vendor's details by its ID.
-    public class GetVendorByIdQuery : IRequest<VendorByIdDto>
+    public class GetVendorByIdQuery : IRequest<VendorDataDto>
     {
         public int Id { get; set; }
-        // Constructor to initialize the query with the vendor ID.
-        public GetVendorByIdQuery(int id)
-        {
-            Id = id;
-        }
     }
 
-    // Handles the GetVendorByIdQuery to return vendor details by vendor ID.
-    public class GetVendorByIdHandler : IRequestHandler<GetVendorByIdQuery, VendorByIdDto>
+    /// <summary>
+    /// Handles the request to get vendor details by vendor ID.
+    /// - Fetches the vendor by ID from the database.
+    /// - Includes related data such as Service and VendorMarket entities, as well as Market entities within VendorMarket.
+    /// - Maps the vendor entity to a VendorDataDto object.
+    /// - Maps the associated markets to the Markets property in the VendorDataDto.
+    /// - Returns the populated VendorDataDto object.
+    /// </summary>
+    public class GetVendorByIdHandler : IRequestHandler<GetVendorByIdQuery, VendorDataDto>
     {
         private readonly IVendorDbContext _dbContext;
         private readonly IMapper _mapper;
@@ -32,20 +34,15 @@ namespace Vendor.Application.Requests.Vendor
             _dbContext = dbContext;
             _mapper = mapper;
         }
-
-        /// <summary>
-        /// Handles the request to get vendor details by vendor ID.
-        /// - Fetches the vendor by ID from the database.
-        /// - Includes related data such as Service and VendorMarket entities, as well as Market entities within VendorMarket.
-        /// - Maps the vendor entity to a VendorByIdDto object.
-        /// - Maps the associated markets to the Markets property in the VendorByIdDto.
-        /// - Returns the populated VendorByIdDto object.
-        /// </summary>
-        /// <param name="request">The <see cref="GetVendorByIdQuery"/> containing the vendor ID.</param>
-        /// <param name="cancellationToken">Cancellation token.</param>
-        /// <returns>A <see cref="VendorByIdDto"/> object containing vendor details, or null if not found.</returns>
-        public async Task<VendorByIdDto> Handle(GetVendorByIdQuery request, CancellationToken cancellationToken)
+        public async Task<VendorDataDto> Handle(GetVendorByIdQuery request, CancellationToken cancellationToken)
         {
+            // Fetch the vendor by ID from the database, including their related Service and VendorMarket entities.
+            // ThenInclude is used to further load the Market entities associated with each VendorMarket.
+            // Map the Vendor entity to VendorDataDto object using AutoMapper.
+            // The markets are selected from the VendorMarket collection for the vendor and mapped to MarketDto objects.
+            // Assign the list of MarketDto objects to the Markets property of the VendorDataDto.
+            // Return the VendorDataDto object, enriched with its associated markets.
+
             var vendor = await _dbContext.Vendors
                 .Include(v => v.Service)
                 .Include(v => v.VendorMarket)
@@ -57,11 +54,9 @@ namespace Vendor.Application.Requests.Vendor
                 return null;
             }
 
-            var VendorByIdDto = _mapper.Map<VendorByIdDto>(vendor);
+            var VendorDataDto = _mapper.Map<VendorDataDto>(vendor);
 
-            VendorByIdDto.Markets = _mapper.Map<List<MarketDto>>(vendor.VendorMarket.Select(vm => vm.Market).ToList());
-
-            return VendorByIdDto;
+            return VendorDataDto;
         }
     }
 }

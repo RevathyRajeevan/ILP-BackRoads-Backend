@@ -48,15 +48,19 @@ namespace Vendor.API.Controllers
         // - 200 OK with VendorDto if successful
         // - 400 Bad Request if an error occurs
         //</Summary>
-        [HttpGet("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VendorByIdDto))]
+        [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VendorDataDto))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
 
-        public async Task<ActionResult<VendorByIdDto>> GetVendorById(int id, CancellationToken cancellationToken)
+        public async Task<ActionResult<VendorDataDto>> GetVendorData([FromQuery] int id, CancellationToken cancellationToken)
         {
             try
             {
-                var response = await _mediator.Send(new GetVendorByIdQuery(id), cancellationToken);
+                var query = new GetVendorByIdQuery
+                {
+                    Id = id
+                };
+                var response = await _mediator.Send(query, cancellationToken);
                 return Ok(response);
             }
             catch (Exception ex)

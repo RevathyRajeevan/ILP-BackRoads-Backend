@@ -1,6 +1,4 @@
-﻿
-
-using Vendor.Domain.Entities.Common;
+﻿using Vendor.Domain.Entities.Common;
 
 namespace Vendor.Domain.Entities
 {
