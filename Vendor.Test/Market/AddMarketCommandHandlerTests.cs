@@ -1,7 +1,4 @@
 ﻿using Moq;
-using Xunit;
-using System.Threading;
-using System.Threading.Tasks;
 using Vendor.Application.Requests.Markets;
 using Vendor.Domain.Entities;
 using Microsoft.EntityFrameworkCore;

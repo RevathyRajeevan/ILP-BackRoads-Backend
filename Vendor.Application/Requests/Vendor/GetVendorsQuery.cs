@@ -59,20 +59,6 @@ namespace Vendor.Application.Requests.Vendor
 
             var vendorDetails = _mapper.Map<IEnumerable<VendorDto>>(vendors);
 
-            var vendorMarkets = vendors.ToDictionary(
-                v => v.Id,
-                v => _mapper.Map<List<MarketDto>>(v.VendorMarket.Select(vm => vm.Market).ToList())
-            );
-         
-            foreach (var vendor in vendorDetails)
-            {
-                if (vendorMarkets.TryGetValue(vendor.Id, out var markets))
-                {
-                    vendor.Markets = markets;
-                }
-            }
-
-
             return vendorDetails;
         }
     }

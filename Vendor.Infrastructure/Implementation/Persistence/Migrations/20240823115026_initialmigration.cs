@@ -54,7 +54,6 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "text", nullable: true),
                     City = table.Column<string>(type: "text", nullable: true),
                     StateProvinceRegion = table.Column<string>(type: "text", nullable: true),
                     PostalCode = table.Column<string>(type: "text", nullable: true),
@@ -64,6 +63,7 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                     Website = table.Column<string>(type: "text", nullable: true),
                     ServiceId = table.Column<int>(type: "integer", nullable: false),
                     IsApproved = table.Column<bool>(type: "boolean", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: true),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
@@ -85,8 +85,7 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                 columns: table => new
                 {
                     VendorId = table.Column<int>(type: "integer", nullable: false),
-                    MarketId = table.Column<int>(type: "integer", nullable: false),
-                    Id = table.Column<int>(type: "integer", nullable: false)
+                    MarketId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {

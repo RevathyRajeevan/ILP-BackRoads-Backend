@@ -1,6 +1,4 @@
-﻿using Vendor.Domain.Entities;
-
-namespace Vendor.Application.DTOs.VendorDTO
+﻿namespace Vendor.Application.DTOs.VendorDTO
 {
     // Represents a Data Transfer Object (DTO) for a Vendor with its details.
     public class VendorDto

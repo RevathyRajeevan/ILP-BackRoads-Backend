@@ -1,11 +1,9 @@
 ﻿using AutoMapper;
 using Moq;
 using Vendor.Application.DTOs.VendorDTO;
-using Vendor.Application.Requests.Markets;
 using Vendor.Application.Requests.Vendor;
 using Vendor.Domain.Entities;
 using Vendor.Infrastructure.Implementation.Persistence;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 public class CreateVendorHandlerTests
 {

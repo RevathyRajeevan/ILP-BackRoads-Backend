@@ -10,8 +10,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
 {
-    [DbContext(typeof(global::VendorDbContext))]
-    [Migration("20240821131158_initialmigration")]
+    [DbContext(typeof(VendorDbContext))]
+    [Migration("20240823115026_initialmigration")]
     partial class initialmigration
     {
         /// <inheritdoc />
@@ -126,9 +126,6 @@ namespace Vendor.Infrastructure.Implementation.Persistence.Migrations
                         .HasColumnType("integer");
 
                     b.Property<int>("MarketId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Id")
                         .HasColumnType("integer");
 
                     b.HasKey("VendorId", "MarketId");

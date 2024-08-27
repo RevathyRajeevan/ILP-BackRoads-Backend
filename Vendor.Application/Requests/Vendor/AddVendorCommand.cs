@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using FluentValidation;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Vendor.Application.DTOs.VendorDTO;
 using Vendor.Domain.Entities;
 using Vendor.Infrastructure.Implementation.Persistence;
@@ -59,6 +59,14 @@ namespace Vendor.Application.Requests.Vendor
             {
                 var errorMessage = validationResult.Errors.FirstOrDefault()?.ErrorMessage;
                 throw new ArgumentException(errorMessage);
+            }
+
+            var vendorExists = await _dbContext.Vendors
+                .AnyAsync(v => v.Name == request.Name, cancellationToken);
+
+            if (vendorExists)
+            {
+                throw new ArgumentException("Vendor name must be unique.");
             }
 
             var vendor = _mapper.Map<Domain.Entities.Vendor>(request);

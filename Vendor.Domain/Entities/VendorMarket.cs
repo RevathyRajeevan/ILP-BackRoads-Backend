@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Vendor.Domain.Entities
+﻿namespace Vendor.Domain.Entities
 {
     public class VendorMarket
     {

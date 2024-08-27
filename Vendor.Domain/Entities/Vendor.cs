@@ -1,5 +1,4 @@
 ﻿using System.Text.Json.Serialization;
-using Vendor.Domain.Entities;
 using Vendor.Domain.Entities.Common;
 
 
