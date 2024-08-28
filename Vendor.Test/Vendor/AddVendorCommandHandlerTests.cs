@@ -66,11 +66,11 @@ public class CreateVendorHandlerTests
             VendorMarket = request.MarketIds.Select(id => new VendorMarket { MarketId = id }).ToList()
         };
 
-        var createDto = new CreateDto { Id = 1, Name = request.Name };
+        var createOrEditDto = new CreateOrEditDto { Id = 1, Name = request.Name };
 
         // Setup the mapping for the request to vendor and vendor to CreateDto
         _mapperMock.Setup(m => m.Map<Vendor.Domain.Entities.Vendor>(It.IsAny<AddVendorCommand>())).Returns(vendor);
-        _mapperMock.Setup(m => m.Map<CreateDto>(It.IsAny<Vendor.Domain.Entities.Vendor>())).Returns(createDto);
+        _mapperMock.Setup(m => m.Map<CreateOrEditDto>(It.IsAny<Vendor.Domain.Entities.Vendor>())).Returns(createOrEditDto);
 
         // Act
         var result = await _handler.Handle(request, CancellationToken.None);
@@ -81,7 +81,7 @@ public class CreateVendorHandlerTests
         _dbContextMock.Verify(db => db.Vendors.Add(It.IsAny<Vendor.Domain.Entities.Vendor>()), Times.Once);
         _dbContextMock.Verify(db => db.SaveChangesAsync(), Times.Once);
         _mapperMock.Verify(m => m.Map<Vendor.Domain.Entities.Vendor>(It.IsAny<AddVendorCommand>()), Times.Once);
-        _mapperMock.Verify(m => m.Map<CreateDto>(It.IsAny<Vendor.Domain.Entities.Vendor>()), Times.Once);
+        _mapperMock.Verify(m => m.Map<CreateOrEditDto>(It.IsAny<Vendor.Domain.Entities.Vendor>()), Times.Once);
     }
 
     [Fact]
