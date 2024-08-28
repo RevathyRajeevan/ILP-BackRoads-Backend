@@ -9,7 +9,8 @@ namespace Vendor.Application.AutoMapper
     {
 
         public MappingConfig() {
-
+            CreateMap<EditVendorCommand, Domain.Entities.Vendor>();
+            CreateMap<EditVendorCommand, CreateDto>();
             CreateMap<Domain.Entities.Vendor, VendorDto>()
            .ForMember(dest => dest.Markets,
                opt => opt.MapFrom(src => src.VendorMarket.Select(vm => vm.Market).ToList()));

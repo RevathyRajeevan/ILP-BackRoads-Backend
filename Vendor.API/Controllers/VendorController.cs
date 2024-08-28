@@ -96,5 +96,46 @@ namespace Vendor.API.Controllers
                 return BadRequest(new { Message = ex.Message });
             }
         }
+
+
+        ///<summary>
+        /// Method: EditVendor
+        /// Purpose: Updates an existing vendor's information
+        /// Route: api/vendor/editvendor
+        /// HTTP Method: PUT
+        /// Response Types:
+        /// - 200 OK with the updated VendorDto if successful
+        /// - 400 Bad Request if validation fails or an error occurs
+        /// - 404 Not Found if the vendor is not found
+        ///</summary>
+        [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateDto))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<CreateDto>> EditVendor(int id, [FromBody] EditVendorCommand request, CancellationToken cancellationToken)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            try
+            {
+                var commandWithId = new EditVendorCommandWithId(id, request);
+                var vendor = await _mediator.Send(commandWithId, cancellationToken);
+                return Ok(vendor);
+            }
+
+            catch (ArgumentException ex)
+            {
+                return NotFound(new { Message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
     }
 }
+
+    
