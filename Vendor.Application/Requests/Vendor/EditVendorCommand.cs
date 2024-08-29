@@ -8,7 +8,7 @@ using FluentValidation;
 
 namespace Vendor.Application.Requests.Vendor
 {
-    public record EditVendorCommandWithId : IRequest<CreateOrEditDto>
+    public record EditVendorCommandWithId : IRequest<VendorInfo>
     {
         public int Id { get; init; }
         public EditVendorCommand Command { get; init; }
@@ -19,7 +19,7 @@ namespace Vendor.Application.Requests.Vendor
         }
     }
 
-    public record EditVendorCommand : IRequest<CreateOrEditDto>
+    public record EditVendorCommand : IRequest<VendorInfo>
     {
         public string Name { get; init; }
         public string City { get; init; }
@@ -40,7 +40,7 @@ namespace Vendor.Application.Requests.Vendor
     // - request (EditVendorCommandWithId): The command request containing the vendor ID and details to edit an existing vendor
     // Returns: Task<CreateDto>: A task that represents the asynchronous operation, containing a CreateDto with the details of the edited vendor
     //</Summary>
-    public class EditVendorHandler : IRequestHandler<EditVendorCommandWithId, CreateOrEditDto>
+    public class EditVendorHandler : IRequestHandler<EditVendorCommandWithId, VendorInfo>
     {
         private readonly IVendorDbContext _dbContext;
         private readonly IMapper _mapper;
@@ -59,7 +59,7 @@ namespace Vendor.Application.Requests.Vendor
             _validator = validator;
         }
 
-        public async Task<CreateOrEditDto> Handle(EditVendorCommandWithId request, CancellationToken cancellationToken)
+        public async Task<VendorInfo> Handle(EditVendorCommandWithId request, CancellationToken cancellationToken)
         {
             /// 1. Validate the edit vendor command
             /// 2. Retrieve the existing vendor from the database
@@ -88,7 +88,7 @@ namespace Vendor.Application.Requests.Vendor
 
             await _dbContext.SaveChangesAsync();
 
-            return _mapper.Map<CreateOrEditDto>(existingVendor);
+            return _mapper.Map<VendorInfo>(existingVendor);
         }
 
         /// <summary>

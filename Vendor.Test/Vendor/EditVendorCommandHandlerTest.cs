@@ -54,9 +54,9 @@ namespace Vendor.Application.Tests
                 MarketIds = new List<int> { 1,2,3 }
             };
 
-            var createOrEditDto = new CreateOrEditDto { Id = 1, Name = request.Name };
+            var createOrEditDto = new VendorInfo { Id = 1, Name = request.Name };
 
-            _mapperMock.Setup(m => m.Map<CreateOrEditDto>(It.IsAny<Vendor.Domain.Entities.Vendor>())).Returns(createOrEditDto);
+            _mapperMock.Setup(m => m.Map<VendorInfo>(It.IsAny<Vendor.Domain.Entities.Vendor>())).Returns(createOrEditDto);
 
             // Act & Assert
             await Assert.ThrowsAsync<ArgumentException>(() => _handler.Handle(new EditVendorCommandWithId(vendorId, request), CancellationToken.None));

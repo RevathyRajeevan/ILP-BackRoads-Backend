@@ -78,9 +78,9 @@ namespace Vendor.API.Controllers
         // - 400 Bad Request if validation fails or an error occurs
         //</Summary>
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(CreateOrEditDto))]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(VendorInfo))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<CreateOrEditDto>> CreateVendor([FromBody] AddVendorCommand request, CancellationToken cancellationToken)
+        public async Task<ActionResult<VendorInfo>> CreateVendor([FromBody] AddVendorCommand request, CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
             {
@@ -109,10 +109,10 @@ namespace Vendor.API.Controllers
         /// - 404 Not Found if the vendor is not found
         ///</summary>
         [HttpPut("{id}")]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CreateOrEditDto))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(VendorInfo))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<CreateOrEditDto>> EditVendor(int id, [FromBody] EditVendorCommand request, CancellationToken cancellationToken)
+        public async Task<ActionResult<VendorInfo>> EditVendor(int id, [FromBody] EditVendorCommand request, CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
             {
