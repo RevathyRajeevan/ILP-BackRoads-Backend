@@ -19,7 +19,7 @@ namespace Vendor.Application.Requests.Vendor
        int ServiceId,
        bool IsApproved,
        ICollection<int> MarketIds
-       ) : IRequest<CreateDto>;
+       ) : IRequest<VendorInfo>;
 
     //<Summary>
     // Purpose: Handles the AddVendorCommand request to create a new vendor in the database
@@ -27,7 +27,7 @@ namespace Vendor.Application.Requests.Vendor
     // - request (AddVendorCommand): The command request containing details to create a new vendor
     // Returns:Task<CreateDto>: A task that represents the asynchronous operation, containing a CreateDto with the details of the created vendor
     //</Summary>
-    public class CreateVendorHandler : IRequestHandler<AddVendorCommand, CreateDto>
+    public class CreateVendorHandler : IRequestHandler<AddVendorCommand, VendorInfo>
     {
         private readonly IVendorDbContext _dbContext;
         private readonly IMapper _mapper;
@@ -45,7 +45,7 @@ namespace Vendor.Application.Requests.Vendor
 
         }
 
-        public async Task<CreateDto> Handle(AddVendorCommand request, CancellationToken cancellationToken)
+        public async Task<VendorInfo> Handle(AddVendorCommand request, CancellationToken cancellationToken)
         {
             /// 1. Maps the <see cref="AddVendorCommand"/> to a <see cref="Domain.Entities.Vendor"/> entity using AutoMapper.
             /// 2. Creates a list of <see cref="VendorMarket"/> associations based on the provided market IDs in the request.
@@ -75,7 +75,7 @@ namespace Vendor.Application.Requests.Vendor
 
             _dbContext.Vendors.Add(vendor);
             await _dbContext.SaveChangesAsync();
-            return _mapper.Map<CreateDto>(vendor);
+            return _mapper.Map<VendorInfo>(vendor);
         }
     }
 
