@@ -16,7 +16,6 @@ namespace Vendor.Application.Requests.Vendor
             // Ensures that the Country is not empty, with an error message if it is.
             // Checks that the Email is in a valid email address format, with an error message for invalid addresses.
             // Validates that the Phone number matches the international phone number format, with an error message if it does not.
-            // Ensures that the Website URL is in a valid format, with an error message for invalid URLs.
             // Checks that the Service ID is greater than zero, with an error message if it is not.
             // Ensures that the IsApproved field is not null, with an error message if it is.
             // Validates that at least one Market ID is provided, with an error message if none are provided.
