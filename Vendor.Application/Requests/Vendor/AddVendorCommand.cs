@@ -61,14 +61,6 @@ namespace Vendor.Application.Requests.Vendor
                 throw new ArgumentException(errorMessage);
             }
 
-            var vendorExists = await _dbContext.Vendors
-                .AnyAsync(v => v.Name == request.Name, cancellationToken);
-
-            if (vendorExists)
-            {
-                throw new ArgumentException("Vendor name must be unique.");
-            }
-
             var vendor = _mapper.Map<Domain.Entities.Vendor>(request);
 
             vendor.VendorMarket = request.MarketIds.Select(id => new VendorMarket { MarketId = id }).ToList();
