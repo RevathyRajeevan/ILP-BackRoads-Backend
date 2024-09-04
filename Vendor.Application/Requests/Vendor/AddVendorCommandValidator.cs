@@ -20,7 +20,7 @@ namespace Vendor.Application.Requests.Vendor
             // Ensures that the IsApproved field is not null, with an error message if it is.
             // Validates that at least one Market ID is provided, with an error message if none are provided.
 
-            RuleFor(v => v.Name).NotEmpty().WithMessage("Vendor name is required.").Must(name => BeUniqueName(name)).WithMessage("Vendor name must be unique.");
+            RuleFor(v => v.Name).NotEmpty().WithMessage("Vendor name is required.").Must(name => BeUniqueName(name)).WithMessage("Vendor name should be unique.");
             RuleFor(v => v.Country).NotEmpty().WithMessage("Country is required.");
             RuleFor(v => v.Email).EmailAddress().WithMessage("Invalid email address.");
             RuleFor(v => v.Phone).Matches(@"^\+?[1-9]\d{1,14}$").WithMessage("Invalid phone number.");
