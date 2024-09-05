@@ -27,11 +27,11 @@ namespace Vendor.API.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<VendorDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<VendorDto>>> GetVendors(CancellationToken cancellationToken)
+        public async Task<ActionResult<PaginationVendorDto>> GetVendors([FromQuery] GetVendorsQuery request, CancellationToken cancellationToken)
         {
             try
             {
-                var response = await _mediator.Send(new GetVendorsQuery(), cancellationToken);
+                var response = await _mediator.Send(request, cancellationToken);
                 return Ok(response);
             }
             catch (Exception ex)
