@@ -145,7 +145,7 @@ namespace Vendor.API.Controllers
         /// - 200 OK with the approved Vendor entity if successful
         /// - 400 Bad Request if an error occurs
         /// </summary>
-        [HttpPatch()]
+        [HttpPatch]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> ApproveVendor([FromQuery] int id, CancellationToken cancellationToken)
