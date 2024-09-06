@@ -7,9 +7,11 @@ namespace Vendor.Application.Requests.Vendor
 {
 
     // Query class to request a list of all vendors
-    public class GetVendorsQuery : IRequest<IEnumerable<VendorDto>>
+    public class GetVendorsQuery : IRequest<PaginationVendorDto>
     {
-        public int Id { get; set; } 
+        public int PageNumber { get; set; } = 1;
+        public int PageSize { get; set; }
+        public string SearchQuery { get; set; } = string.Empty;
     }
 
 
@@ -22,7 +24,7 @@ namespace Vendor.Application.Requests.Vendor
     // - Populates each VendorDto with the corresponding list of markets.
     // - Returns the list of VendorDto objects, now including their associated markets.
     //</Summary>
-    public class GetVendorsHandler : IRequestHandler<GetVendorsQuery, IEnumerable<VendorDto>>
+    public class GetVendorsHandler : IRequestHandler<GetVendorsQuery, PaginationVendorDto>
     {
         private readonly IVendorDbContext _dbContext;
         private readonly IMapper _mapper;
@@ -38,7 +40,7 @@ namespace Vendor.Application.Requests.Vendor
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<VendorDto>> Handle(GetVendorsQuery request, CancellationToken cancellationToken)
+        public async Task<PaginationVendorDto> Handle(GetVendorsQuery request, CancellationToken cancellationToken)
         {
             // Fetch the list of vendors from the database, including their related Service and VendorMarket entities.
             // ThenInclude is used to further load the Market entities associated with each VendorMarket.
@@ -51,15 +53,39 @@ namespace Vendor.Application.Requests.Vendor
             // Return the list of VendorDto objects, each enriched with its associated markets.
 
 
-            var vendors = await _dbContext.Vendors
-                .Include(v => v.Service)
-                .Include(v => v.VendorMarket)
-                    .ThenInclude(vm => vm.Market)
-                .ToListAsync(cancellationToken);
+            var vendors = _dbContext.Vendors
+                        .Include(v => v.Service)
+                        .Include(v => v.VendorMarket)
+                            .ThenInclude(vm => vm.Market)
+                        .AsQueryable();
 
-            var vendorDetails = _mapper.Map<IEnumerable<VendorDto>>(vendors);
+            if (!string.IsNullOrEmpty(request.SearchQuery))
+            {
+                vendors = vendors.Where(v => v.Name.Contains(request.SearchQuery));
+                var vendorDtos = _mapper.Map<IEnumerable<VendorDto>>(vendors);
+                return new PaginationVendorDto
+                {
+                    Vendors = vendorDtos,
+                    TotalItems = 1,
+                };
+            }
+            else
+            {
+                var totalItems = await vendors.CountAsync(cancellationToken);
 
-            return vendorDetails;
+                var vendorsdata = await vendors
+                    .Skip((request.PageNumber - 1) * request.PageSize)
+                    .Take(request.PageSize).ToListAsync(cancellationToken);
+
+                var vendorDtos = _mapper.Map<IEnumerable<VendorDto>>(vendorsdata);
+                return new PaginationVendorDto
+                {
+                    Vendors = vendorDtos,
+                    TotalItems = totalItems,
+                };
+
+            }
+
         }
     }
 }

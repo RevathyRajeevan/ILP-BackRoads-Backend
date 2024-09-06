@@ -27,11 +27,11 @@ namespace Vendor.API.Controllers
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<VendorDto>))]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<IEnumerable<VendorDto>>> GetVendors(CancellationToken cancellationToken)
+        public async Task<ActionResult<PaginationVendorDto>> GetVendors([FromQuery] GetVendorsQuery request, CancellationToken cancellationToken)
         {
             try
             {
-                var response = await _mediator.Send(new GetVendorsQuery(), cancellationToken);
+                var response = await _mediator.Send(request, cancellationToken);
                 return Ok(response);
             }
             catch (Exception ex)
@@ -129,6 +129,41 @@ namespace Vendor.API.Controllers
             catch (ArgumentException ex)
             {
                 return NotFound(new { Message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Message = ex.Message });
+            }
+        }
+
+        /// <summary>
+        /// Method: ApproveVendor
+        /// Purpose: Approves an existing vendor by setting its IsApproved status to true
+        /// Route: api/vendor/approvevendor
+        /// HTTP Method: PATCH
+        /// Response Types:
+        /// - 200 OK with the approved Vendor entity if successful
+        /// - 400 Bad Request if an error occurs
+        /// </summary>
+        [HttpPatch]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> ApproveVendor([FromQuery] int id, CancellationToken cancellationToken)
+        {
+            try
+            {
+                var command = new ApproveVendorCommand
+                {
+                    Id = id
+                };
+                var result = await _mediator.Send(command, cancellationToken);
+
+                if (result == null)
+                {
+                    return NoContent();
+                }
+                return Ok(result);
+
             }
             catch (Exception ex)
             {

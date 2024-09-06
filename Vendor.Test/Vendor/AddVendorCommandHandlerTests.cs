@@ -14,20 +14,24 @@ public class CreateVendorHandlerTests
     public CreateVendorHandlerTests()
     {
 
+        // Create a mock instance of the IVendorDbContext 
+        _dbContextMock = new Mock<IVendorDbContext>();
+        
+        //Mock Automapper
+        _mapperMock = new Mock<IMapper>();
+
         // Mock DbSet for Vendor and VendorMarket
-        _validator = new AddVendorCommandValidator();
         var vendors = new List<Vendor.Domain.Entities.Vendor>().AsQueryable();
         var vendorDbSetMock = DbSetMockUtility.CreateDbSetMock(vendors);
         var vendorMarkets = new List<VendorMarket>().AsQueryable();
         var vendorMarketDbSetMock = DbSetMockUtility.CreateDbSetMock(vendorMarkets);
 
         // Mock the database context
-        _dbContextMock = new Mock<IVendorDbContext>();
         _dbContextMock.Setup(c => c.Vendors).Returns(vendorDbSetMock.Object);
         _dbContextMock.Setup(c => c.VendorMarkets).Returns(vendorMarketDbSetMock.Object);
 
-        // Mock AutoMapper
-        _mapperMock = new Mock<IMapper>();
+        // Initialize the validator with the mocks
+        _validator = new AddVendorCommandValidator(_dbContextMock.Object);
 
         // Initialize the handler with mocks
         _handler = new CreateVendorHandler(_dbContextMock.Object, _mapperMock.Object,_validator);

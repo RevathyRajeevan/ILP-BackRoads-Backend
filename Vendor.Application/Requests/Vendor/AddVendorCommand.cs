@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Vendor.Application.DTOs.VendorDTO;
 using Vendor.Domain.Entities;
 using Vendor.Infrastructure.Implementation.Persistence;
@@ -37,11 +36,10 @@ namespace Vendor.Application.Requests.Vendor
         /// </summary>
         /// <param name="dbContext">The <see cref="IVendorDbContext"/> instance used to interact with the database.</param>
         /// <param name="mapper">The <see cref="IMapper"/> instance used for auto mapping.</param>
-        public CreateVendorHandler(IVendorDbContext dbContext, IMapper mapper,AddVendorCommandValidator validator)
+        public CreateVendorHandler(IVendorDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
-            _validator = validator;
 
         }
 
@@ -53,23 +51,10 @@ namespace Vendor.Application.Requests.Vendor
             /// 4. Saves changes to the database asynchronously.
             /// 5. Maps the saved vendor entity to a <see cref="CreateDto"/> and returns it.
             /// 
-            var validationResult = await _validator.ValidateAsync(request, cancellationToken);
-
-            if (!validationResult.IsValid)
-            {
-                var errorMessage = validationResult.Errors.FirstOrDefault()?.ErrorMessage;
-                throw new ArgumentException(errorMessage);
-            }
-
-            var vendorExists = await _dbContext.Vendors
-                .AnyAsync(v => v.Name == request.Name, cancellationToken);
-
-            if (vendorExists)
-            {
-                throw new ArgumentException("Vendor name must be unique.");
-            }
 
             var vendor = _mapper.Map<Domain.Entities.Vendor>(request);
+
+            vendor.Name = vendor.Name.ToLower();
 
             vendor.VendorMarket = request.MarketIds.Select(id => new VendorMarket { MarketId = id }).ToList();
 

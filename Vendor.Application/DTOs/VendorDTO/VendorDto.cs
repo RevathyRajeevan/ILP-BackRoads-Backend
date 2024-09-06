@@ -25,5 +25,10 @@
         public string Name { get; set; } // Name of the market.
     }
 
+    public class PaginationVendorDto
+    {
+        public IEnumerable<VendorDto> Vendors { get; set; }
+        public int TotalItems { get; set; }
+    }
 
 }
